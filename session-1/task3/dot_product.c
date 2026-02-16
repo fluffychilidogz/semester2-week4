@@ -4,6 +4,8 @@
  */
 
  #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
 
  int main( void ) {
     int n = 5;
@@ -22,6 +24,22 @@
     Store your answer in d
     print your final answer
     */
+
+    for (int k=0; k<n; k++)
+    {
+      a[k] = k + 2;
+    }
+
+    for (int k=0; k<n; k++)
+    {
+      b[k] = k + 4;
+    }
+
+    for (int k=0; k<n; k++)
+    {
+      d[k] = a[k] + b[k];
+      printf("%.2f\n", d[k]);
+    }
 
     // explicit deallocation of heap memory before exit */
     free(a);
