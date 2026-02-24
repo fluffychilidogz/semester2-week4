@@ -10,9 +10,9 @@ Student ID: 202003508
 int main( int argc, char **argv ) {
 
     // define appropriate data to hold your answer
-    char buffer[9 * 4 + 8 + 1];
+    char buffer[10 * 4 + 9 + 1];
     buffer[0] = '\0';
-    if (argc >= 1 && argc <= 10)
+    if (argc >= 1 && argc <= 11)
     {
         for(int i=1; i<argc; ++i)
         {
