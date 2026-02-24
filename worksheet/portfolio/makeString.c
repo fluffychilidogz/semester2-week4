@@ -10,23 +10,26 @@ Student ID: 202003508
 int main( int argc, char **argv ) {
 
     // define appropriate data to hold your answer
-    char buffer[10 * 4 + 9 + 1];
-    buffer[0] = '\0';
-    if (argc >= 1 && argc <= 11)
+    // max character size of 50
+    // max of 10 arguments * max of 4 characters + max of 9 hyphens + 1 null to end the function 
+    char buffer[50];
+    buffer[0] = '\0'; // initialise null so concatenation works
+
+    if (argc >= 1 && argc <= 11) // if condition for when command line arguement is between 2nd arguement (after ./a.out) and last argument
     {
-        for(int i=1; i<argc; ++i)
+        for(int i=1; i<argc; ++i) // for loop on each argument individually
         {
-            if (strlen(argv[i]) < 5)
+            if (strlen(argv[i]) < 5) // max character size of 4
             {
-                strcat(buffer, argv[i]);
+                strcat(buffer, argv[i]); // if successful, add it to buffer string 
             }
             else
             {
-                return 0;
+                return 0; // end otherwise
             }
             if (i<argc -1)
             {
-                strcat(buffer, "-");
+                strcat(buffer, "-"); // concatenate in between arguments, excluding last argument
             }
         }
     }
